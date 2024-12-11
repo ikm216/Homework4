@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class RectangularPrismTest {
+	
 	@Test
 	void should_create_cube() {
 		RectangularPrism _ = new RectangularPrism(10.0, 10.0, 10.0);
