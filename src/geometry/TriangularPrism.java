@@ -44,4 +44,9 @@ public class TriangularPrism extends Geometry3D{
     public double volume() {
         return 0.5 * b * h * len;
     }
+
+    @Override
+    public String toString() {
+    return "TriangularPrism [Base: " + b + ", Height: " + h + ", Length: " + len + "]";
+    }
 }

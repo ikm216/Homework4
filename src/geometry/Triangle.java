@@ -39,4 +39,9 @@ public class Triangle extends Geometry2D{
     public double perimeter() {
         return 3 * b;
     }
+
+    @Override
+    public String toString() {
+        return "Triangle [Base: " + b + ", Height: " + h + "]";
+    }
 }

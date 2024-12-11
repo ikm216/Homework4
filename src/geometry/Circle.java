@@ -33,4 +33,9 @@ public class Circle extends Geometry2D{
     public double perimeter(){
         return 2 *Math.PI * rad;
     }
+
+    @Override
+    public String toString() {
+        return "Circle [Radius: " + rad + "]";
+    }
 }

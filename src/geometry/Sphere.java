@@ -30,4 +30,9 @@ public class Sphere extends Geometry3D{
     public double volume() {
         return (4 / 3.0) * Math.PI * rad * rad * rad;
     }
+
+    @Override
+    public String toString() {
+        return "Sphere [Radius: " + rad + "]";
+    }
 }

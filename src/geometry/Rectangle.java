@@ -36,4 +36,11 @@ public class Rectangle extends Geometry2D {
     public double perimeter() {
         return 2 * (len + wid);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle [Length: " + len + ", Width: " + wid + "]";
+    }
+
+    
 }
