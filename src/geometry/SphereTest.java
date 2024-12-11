@@ -17,7 +17,7 @@ public class SphereTest {
     @Test
     public void test_should_return_volume_of_sphere(){
         Sphere sphere = new Sphere(5.0);
-        assert(sphere.volume() == (4.0 / 5.0) * Math.PI * Math.pow(5.0, 3));
+        assert(sphere.volume() == (4.0 / 3.0) * Math.PI * Math.pow(5.0, 3));
         
     }
 }
