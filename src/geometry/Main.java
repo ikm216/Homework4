@@ -12,9 +12,10 @@ public class Main {
             System.out.println("Choose an option:");
             System.out.println("1. Add Geometry");
             System.out.println("2. Remove Geometry");
-            System.out.println("3. Find Geometry");
-            System.out.println("4. Display All Geometries");
-            System.out.println("5. Exit");
+            System.out.println("3. Find Area or Perimeter for 2D Geometry");
+            System.out.println("4. Find Volume or Surface Area for 3D Geometry");
+            System.out.println("5. Display All Geometries");
+            System.out.println("6. Exit");
             int choice = scan.nextInt();
 
             switch (choice) {
@@ -56,19 +57,40 @@ public class Main {
                     }
                 }
                 case 2 -> {
-                    System.out.println("Remove is not implemented in detail, skipping.");
+                    System.out.println("Remove is not implemented in detail. Skipping.");
                 }
                 case 3 -> {
-                    System.out.println("Find is not implemented in detail, skipping.");
+                    System.out.println("Choose 2D Geometry index to calculate:");
+                    geometry2DList.displayAll();
+                    int index = scan.nextInt();
+                    Geometry2D geometry = geometry2DList.find(index);
+                    if (geometry != null) {
+                        System.out.println("Area: " + geometry.area());
+                        System.out.println("Perimeter: " + geometry.perimeter());
+                    } else {
+                        System.out.println("Invalid index.");
+                    }
                 }
                 case 4 -> {
+                    System.out.println("Choose 3D Geometry index to calculate:");
+                    geometry3DList.displayAll();
+                    int index = scan.nextInt();
+                    Geometry3D geometry = geometry3DList.find(index);
+                    if (geometry != null) {
+                        System.out.println("Volume: " + geometry.volume());
+                        System.out.println("Surface Area: " + geometry.surfaceArea());
+                    } else {
+                        System.out.println("Invalid index.");
+                    }
+                }
+                case 5 -> {
                     System.out.println("Displaying all geometries:");
                     System.out.println("2D Geometries:");
                     geometry2DList.displayAll();
                     System.out.println("3D Geometries:");
                     geometry3DList.displayAll();
                 }
-                case 5 -> {
+                case 6 -> {
                     System.out.println("Exiting...");
                     scan.close();
                     return;
