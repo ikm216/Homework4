@@ -8,14 +8,14 @@ public class CircleTest {
     void test_should_return_created_circle(){
         Circle _ = new Circle(5.0);
     }
-
+    @Test
     public void test_should_return_area_of_circle(){
         Circle circle = new Circle(5.0);
-        assert(circle.area() == Math.PI * 3.0 * 3.0);
+        assert(circle.area() == Math.PI * 5.0 * 5.0);
     }
-
+    @Test
     public void test_should_return_perimeter_of_circle(){
         Circle circle = new Circle(5.0);
-        assert(circle.perimeter() == 2 * Math.PI * 4.0);
+        assert(circle.perimeter() == 2 * Math.PI * 5.0);
     }
 }
